@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo3"
+    android:background="@drawable/CIRCULO"
     tools:context=".Pantalla_Altas">
 
     <TextView
@@ -13,13 +13,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="101dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/intro3"
         android:textColor="@color/intro3"
         android:textSize="30.3sp"
-        android:textStyle="normal"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,12 +28,29 @@
         android:id="@+id/buttonstart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
-        android:backgroundTint="#009688"
+        android:layout_marginBottom="168dp"
+        android:backgroundTint="#036C62"
         android:text="@string/empezar_prueba"
+        android:textColor="@color/intro3"
+        android:textStyle="bold"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/buttonstop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="168dp"
+        android:backgroundTint="#036C62"
+        android:text="@string/acabar_prueba"
+        android:textColor="@color/intro3"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView

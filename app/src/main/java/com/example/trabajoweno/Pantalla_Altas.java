@@ -3,14 +3,17 @@ package com.example.trabajoweno;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Pantalla_Altas extends AppCompatActivity {
-
+    MediaPlayer mMediaPlayer;
+    long startTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,26 +22,55 @@ public class Pantalla_Altas extends AppCompatActivity {
         Button buttonstart = (Button) findViewById(R.id.buttonstart);
         Button buttonstop = (Button) findViewById(R.id.buttonstop);
         /*AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);*/
-        MediaPlayer mMediaPlayer = MediaPlayer.create(Pantalla_Altas.this, R.raw.sonido_pitido); /** El nombre lo he puesto aleatorio, tienes que poner el nombre del tuyo, MyActivity.this,R.raw.aleatorio */
+        mMediaPlayer = MediaPlayer.create(Pantalla_Altas.this, R.raw.sonido_pitido); /** El nombre lo he puesto aleatorio, tienes que poner el nombre del tuyo, MyActivity.this,R.raw.aleatorio */
         /** tienes que meter tu sonido en "app/src/main/res/raw/" */
         buttonstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (v.getId() == R.id.buttonstart) {
                     mMediaPlayer.start();
+                    startTime = System.currentTimeMillis();
                 }
             }
         });
 
-        buttonstop.setOnClickListener(new View.OnClickListener(){
+        buttonstop.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonstop) {
                     mMediaPlayer.stop();
-                    /*displaySeconds();*/
+                    displaySeconds();
                 }
             }
         });
+    }
+
+    public void displaySeconds () {
+        /*long startTime = System.currentTimeMillis();*/
+        long timeElapsed = System.currentTimeMillis() - startTime;
+        /*final String Seconds = String.valueOf(timeElapsed / 1000);*/
+            /*mMediaPlayer.release();
+            mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {*/
+        TextView secondsText = (TextView) findViewById(R.id.textView);
+        /*secondsText.setText(String.valueOf(Seconds));*/
+        if (timeElapsed > 5) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Resultado");
+                builder.setMessage("Apto");
+                builder.setPositiveButton("Aceptar", null);
+                builder.create();
+                builder.show();
+        }
+
+        else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Resultado");
+            builder.setMessage("No apto");
+            builder.setPositiveButton("Aceptar", null);
+            builder.create();
+            builder.show();
+        }
     }
 }

@@ -13,29 +13,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="101dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/intro3"
         android:textColor="@color/intro3"
         android:textSize="30.3sp"
-        android:textStyle="normal"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <Button
         android:id="@+id/buttonstart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
-        android:backgroundTint="#009688"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/gradient"
         android:text="@string/empezar_prueba"
+        android:textColor="@color/intro3"
+        android:textStyle="bold"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonstop"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/gradient"
+        android:text="@string/acabar_prueba"
+        android:textColor="@color/intro3"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
@@ -60,30 +76,6 @@
                 android:textColor="@color/intro2"
                 android:textSize="20sp" />
         </LinearLayout>
-
-
     </ScrollView>
-
-    <Button
-        android:id="@+id/buttonstop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#009688"
-        android:text="@string/finalizar_prueba"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonstart" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Frecuencia escuchada"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonstop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

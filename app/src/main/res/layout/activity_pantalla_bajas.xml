@@ -12,24 +12,46 @@
         android:id="@+id/text7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginTop="120dp"
         android:text="@string/intro4"
         android:textColor="@color/intro4"
-        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="30.3sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:backgroundTint="#009688"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/gradient"
         android:text="@string/empezar_prueba"
+        android:textColor="@color/intro3"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/gradient"
+        android:text="@string/acabar_prueba"
+        android:textColor="@color/intro3"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
@@ -43,7 +65,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="10dp"
+                android:text="@string/scroll2"
+                android:textColor="@color/intro2"
+                android:textSize="20sp" />
+        </LinearLayout>
     </ScrollView>
 
 
